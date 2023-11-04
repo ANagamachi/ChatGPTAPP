@@ -34,7 +34,6 @@ def select_model():
 
 def get_url_input():
     url = st.text_input("Youtube URL: ", key="input")
-    print(url)
     return url
 
 
@@ -93,7 +92,11 @@ def main():
 
     with container:
         url = get_url_input()
-        document = get_document(url)
+        if url:
+            document = get_document(url)
+        else:
+            document = None
+            
         if document:
             with st.spinner("ChatGPT is typing ..."):
                 output_text, cost = summarize(llm, document)
