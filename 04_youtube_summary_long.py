@@ -1,12 +1,12 @@
 import streamlit as st
-from langchain.llms import OpenAI
-from langchain.chat_models import ChatOpenAI
-from langchain.callbacks import get_openai_callback
+from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
+from langchain_community.callbacks import get_openai_callback
 
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
-from langchain.document_loaders import YoutubeLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import YoutubeLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def init_page():
     st.set_page_config(

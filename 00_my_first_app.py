@@ -1,6 +1,6 @@
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import (SystemMessage, HumanMessage, AIMessage)
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import (SystemMessage, HumanMessage, AIMessage)
 
 
 def main():

@@ -1,12 +1,12 @@
 import streamlit as st
 from streamlit_chat import message
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import (
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import (
     SystemMessage,
     HumanMessage,
     AIMessage
 )
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
 import requests
 from bs4 import BeautifulSoup

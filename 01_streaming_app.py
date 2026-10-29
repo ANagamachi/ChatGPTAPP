@@ -1,7 +1,7 @@
 import streamlit as st
-from langchain.callbacks import StreamlitCallbackHandler
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import (
+from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import (
     SystemMessage,
     HumanMessage,
     AIMessage

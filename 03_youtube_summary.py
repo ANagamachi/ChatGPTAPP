@@ -1,10 +1,10 @@
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
-from langchain.callbacks import get_openai_callback
+from langchain_openai import ChatOpenAI
+from langchain_community.callbacks import get_openai_callback
 
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
-from langchain.document_loaders import YoutubeLoader
+from langchain_community.document_loaders import YoutubeLoader
 
 
 def init_page():

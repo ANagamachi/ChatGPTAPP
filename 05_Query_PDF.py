@@ -1,14 +1,14 @@
 # pip install pycryptodome
 from glob import glob
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
-from langchain.llms import OpenAI
-from langchain.callbacks import get_openai_callback
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAI
+from langchain_community.callbacks import get_openai_callback
 
 from PyPDF2 import PdfReader
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Qdrant
+from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import Qdrant
 from langchain.chains import RetrievalQA
 
 from qdrant_client import QdrantClient
